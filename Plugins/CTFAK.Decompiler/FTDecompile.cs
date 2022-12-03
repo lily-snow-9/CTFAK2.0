@@ -771,7 +771,14 @@ namespace CTFAK.Tools
                     FTDecompile.lastAllocatedHandleImg++;
                     var newIconImage = new CCN.Chunks.Banks.Image();
                     newIconImage.Handle = lastAllocatedHandleImg;
-                    newIconImage.FromBitmap(iconBmp);
+                    try
+                    {
+                        newIconImage.FromBitmap(iconBmp);
+                    }
+                    catch
+                    {
+                        newIconImage.FromBitmap(Resources.EmptyIcon);
+                    }
                     mfa.Icons.Items.Add(lastAllocatedHandleImg, newIconImage);
                 }
 
