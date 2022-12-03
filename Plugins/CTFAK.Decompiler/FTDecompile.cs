@@ -1033,7 +1033,7 @@ namespace CTFAK.Tools
                             newItem.Loader = newExt;
                             var tuple = new Tuple<int, string, string, int, string>(ext.Handle, ext.Name, "",
                                 ext.MagicNumber, ext.SubType);
-                            // mfa.Extensions.Add(tuple);
+                            mfa.Extensions.Add(tuple);
                         }
                     }
                     else if (item.ObjectType == (int)Constants.ObjectType.Text)
